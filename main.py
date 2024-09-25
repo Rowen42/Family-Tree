@@ -78,15 +78,8 @@ def calculate_max_gen_using_children(root_descendant, ancestry):
 def button_clicked(button_name):
     global familytree
     filename = None
-    total_steps = None
-    if button_name == "Wilson":
-        filename = 'Wilson_Family_Tree.csv'
-    elif button_name == "King":
-        filename = 'King_Family_Tree.csv'
-    elif button_name == "Full":
-        filename = 'Full_Family_Tree.csv'
-    elif button_name == "Test":
-        filename = ('Test_Family_Tree.csv')
+    if button_name == "MyTree":
+        filename = ('My_Family_Tree.csv')
 
     if filename:
         error_position = identify_problematic_byte(filename)
@@ -292,12 +285,9 @@ def process_family_tree():
     else:
         print("No family tree loaded.")
 
-# Create buttons for selecting family tree
+# Create buttons for selecting family tree so you could be working on multiple family trees at the same time
 button_options = {
-    "Wilson": {"text": "Wilson Family Tree", "bg": "hotpink", "fg": "black"},
-    "King": {"text": "King Family Tree", "bg": "skyblue", "fg": "black"},
-    "Full": {"text": "Full Family Tree", "bg": "mediumorchid", "fg": "black"},
-    "Test": {"text": "Test Family Tree", "bg": "mediumspringgreen", "fg": "black"}
+    "MyTree": {"text": "My Family Tree", "bg": "hotpink", "fg": "black"}
 }
 
 for button_name, options in button_options.items():
